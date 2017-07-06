@@ -7,19 +7,26 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { MytableComponent } from './mytable/mytable.component';
 
 //import { routing } from './app.routing';
 //import { AppRouteModule } from './app.route';
 
 const routes:Routes = [
-    { path: '', redirectTo: 'home', pathMatch: 'full' },
-    { path: 'home', component: HomeComponent }
+    { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+    { path: 'dashboard', component: HomeComponent },
+    { path: 'mytable', component: MytableComponent }
 ];
 
 @NgModule({
     declarations: [
         AppComponent,
-        HomeComponent
+        HomeComponent,
+        NavbarComponent,
+        SidebarComponent,
+        MytableComponent
     ],
     imports: [
         BrowserModule,
